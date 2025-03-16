@@ -74,11 +74,11 @@ Version: 1.1.1
 :root {
   --chirofind-font: "Kumbh Sans", sans-serif;
   --chirofind-font-two: "Nunito", sans-serif;
-  --chirofind-gray: #67687A;
+  --chirofind-gray: #618e9c;
   --chirofind-gray-rgb: 103, 104, 122;
   --chirofind-white: #ffffff;
   --chirofind-white-rgb: 255, 255, 255;
-  --chirofind-base: #58bfff;
+  --chirofind-base: #3e648a;
   --chirofind-base-rgb: 19, 76, 179;
   --chirofind-black: #101A29;
   --chirofind-black-rgb: 16, 26, 41;
@@ -3195,9 +3195,18 @@ ul {
 /*--------------------------------------------------------------
 # Banner One
 --------------------------------------------------------------*/
+
+
+
+
+/* Ensure content is above the overlay */
+.banner-one > * {
+  position: relative;
+  z-index: 1;
+}
 .banner-one {
   position: relative;
-  background-color: #e0e8f0; /* Light blue background */
+  background-color: #1e4c7a; /* Light blue background */
   padding: 100px 0;
   min-height: 600px;
   overflow: visible;
@@ -3236,6 +3245,7 @@ ul {
   font-size: 48px;
   font-weight: 700;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .banner-one__subtitle {
@@ -3244,13 +3254,28 @@ ul {
   margin-bottom: 20px;
 }
 
+.banner-one__btn-and-satisfied-patient {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 52px;
+}
+
+.banner-one__btn-box {
+  position: relative;
+  display: block;
+  
+}
+
 .banner-one__btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
+  border: 1px solid var(--chirofind-white);
+  padding: 15px 24px 15px;
+}
+
+.banner-one__btn:hover {
+  border: 1px solid var(--chirofind-black);
 }
 
 .float-bob-y {
@@ -6819,77 +6844,89 @@ ul {
 /*--------------------------------------------------------------
 # Appointment One
 --------------------------------------------------------------*/
-.appointment-one {
+/* 
+.insurance-section {
   position: relative;
-  display: block;
-  padding: 0 0 120px;
-  margin-top: -175px;
-  z-index: 1;
+  padding: 60px 0;
+  background-color: #1e4c7a;
+  linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)); 
+  background-size: cover, auto;
+  background-position: center, center;
+  background-repeat: no-repeat, no-repeat;
+  min-height: 200px; 
 }
 
-.appointment-one .row {
-  --bs-gutter-x: 0px;
-  display: flex;
+
+
+.insurance-section .container {
+
   justify-content: center;
+  z-index: 2;
 }
 
-.appointment-one__left {
-  position: relative;
-  display: block;
-}
-
-.appointment-one__left-content {
-  position: relative;
-  display: block;
-  background-color: var(--chirofind-base);
-  box-shadow: 0px 4px 25px rgba(255, 255, 255, 0.06);
+.insurance-content {
+  background-color: #abeeff; 
+  box-shadow: 0px 4px 25px rgba(255, 227, 175, 0.06);
   padding: 56px 60px 65px;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+  border-radius: 30px;
   text-align: center;
+
 }
 
-.appointment-one__left-content-title {
+.insurance-title {
   font-size: 36px;
   font-weight: 600;
   color: var(--chirofind-white);
   line-height: 44px;
 }
 
-.appointment-one__img-box {
+.insurance-img-box {
   display: flex;
-  flex-wrap: wrap; /* Allows logos to wrap into two rows */
-  justify-content: space-around; /* Evenly distributes logos within each row */
-  gap: 20px; /* Space between logos */
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
   margin: 20px 0;
   max-width: 100%;
 }
 
-.appointment-one__logo {
+.insurance-logo {
   width: 150px;
   height: 150px;
   object-fit: contain;
-  flex: 0 0 calc(50% - 20px); /* Ensures two logos per row, accounting for gap */
-  box-sizing: border-box; /* Includes padding/margins in width calculation */
+  flex: 0 0 calc(50% - 20px);
+  box-sizing: border-box;
 }
 
-.appointment-one__btn-box {
+.insurance-btn-box {
   position: relative;
   display: block;
   text-align: center;
+  margin-top: 20px;
 }
 
-.appointment-one__btn {
+.insurance-btn {
   background-color: transparent;
   border: 1px solid var(--chirofind-white);
   color: var(--chirofind-white);
 }
 
-.appointment-one__btn:hover {
+.insurance-btn:hover {
   border: 1px solid rgba(var(--chirofind-white-rgb), 0.10);
 }
+
+@media (max-width: 768px) {
+  .insurance-section {
+      padding: 40px 0;
+      min-height: 300px;
+  }
+  .insurance-logo {
+      flex: 0 0 100%;
+      max-width: 150px;
+  }
+  .insurance-img-box {
+      justify-content: center;
+  }
+}  */
 /*--------------------------------------------------------------
 # Services Two
 --------------------------------------------------------------*/
