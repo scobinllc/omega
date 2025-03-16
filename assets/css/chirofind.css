@@ -78,7 +78,7 @@ Version: 1.1.1
   --chirofind-gray-rgb: 103, 104, 122;
   --chirofind-white: #ffffff;
   --chirofind-white-rgb: 255, 255, 255;
-  --chirofind-base: #67757a;
+  --chirofind-base: #58bfff;
   --chirofind-base-rgb: 19, 76, 179;
   --chirofind-black: #101A29;
   --chirofind-black-rgb: 16, 26, 41;
@@ -3197,67 +3197,111 @@ ul {
 --------------------------------------------------------------*/
 .banner-one {
   position: relative;
-  display: block;
-  background-color: var(--chirofind-base);
-  border-radius: 50px;
-  padding: 185px 0 370px;
-  overflow: hidden;
-  z-index: 1;
+  background-color: #e0e8f0; /* Light blue background */
+  padding: 100px 0;
+  min-height: 600px;
+  overflow: visible;
 }
 
 .banner-one__shape-1 {
   position: absolute;
-  top: 75px;
-  left: 0;
-}
-
-.banner-one__shape-1 img {
-  width: auto;
-}
-
-.banner-one__shape-2 {
-  position: absolute;
-  bottom: 175px;
-  left: 665px;
-}
-
-.banner-one__shape-2 img {
-  width: auto;
+  top: 50px;
+  left: 50px;
+  z-index: 1; /* Behind text */
 }
 
 .banner-one__shape-3 {
   position: absolute;
-  top: 0px;
-  right: 0px;
-  z-index: 1;
+  top: 50px;
+  right: 50px;
+  z-index: 1; /* Behind text */
 }
 
+.banner-one__shape-1 img,
 .banner-one__shape-3 img {
-  width: auto;
-}
-/* need to adjust as per the src later*/
-.banner-one__shape-4 {
-  position: relative;
-    top: 0; /* Adjusted to cover the background */
-    right: 0; /* Adjusted to align with the right side */
-    width: 100px; /* Doubled from 500px */
-    height: 100px; /* Doubled from 400px */
-    opacity: 0.3; /* Reduced for a shaded effect (adjust as needed) */
-    z-index: -1; /* Places it behind all other elements */
-    overflow: visible;
-}
-.banner-one__shape-4 .banner-one__shape-4-inner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('assets/images/Office/norani-8.jpeg');
-  background-size: contain; /* Ensures the entire image is visible */
-  background-position: center right; /* Aligns image to the right */
-  background-repeat: no-repeat;
+  width: 150px; /* Increased from 100px to 150px */
+  height: auto;
+  opacity: 0.8; /* Optional: Adjusted for visibility */
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2)); /* Optional: Add shadow */
 }
 
+.banner-one__content {
+  position: relative;
+  z-index: 2; /* Above shapes */
+  text-align: center;
+  color: #fff; /* White text for contrast */
+}
+
+.banner-one__title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.banner-one__subtitle {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.banner-one__btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.float-bob-y {
+  animation: float-bob-y 3s infinite;
+}
+
+.img-bounce {
+  animation: img-bounce 3s infinite;
+}
+
+@keyframes float-bob-y {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-20px);
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+
+@keyframes img-bounce {
+  0%, 100% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.1);
+  }
+}
+
+@media (max-width: 768px) {
+  .banner-one__shape-1 {
+      left: 20px;
+      top: 20px;
+  }
+  .banner-one__shape-3 {
+      right: 20px;
+      top: 20px;
+  }
+  .banner-one__shape-1 img,
+  .banner-one__shape-3 img {
+      width: 120px; /* Adjusted from 80px to 120px for responsiveness */
+  }
+  .banner-one__title {
+      font-size: 36px;
+  }
+  .banner-one__subtitle {
+      font-size: 18px;
+  }
+}
 
 
 .banner-one__shape-6 {
