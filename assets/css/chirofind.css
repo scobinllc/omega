@@ -74,7 +74,7 @@ Version: 1.1.1
 :root {
   --chirofind-font: "Kumbh Sans", sans-serif;
   --chirofind-font-two: "Nunito", sans-serif;
-  --chirofind-gray: #618e9c;
+  --chirofind-gray: #ffffff;
   --chirofind-gray-rgb: 103, 104, 122;
   --chirofind-white: #ffffff;
   --chirofind-white-rgb: 255, 255, 255;
@@ -15939,13 +15939,17 @@ ul {
 # End
 --------------------------------------------------------------*/
 
-
-
-
-
 .site-footer__top .row > div {
   padding: 0 100px;
 }
 
 
+.team-two__slider .team-two__img img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
 

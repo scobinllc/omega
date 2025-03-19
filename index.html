@@ -10,7 +10,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
     <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
-    <meta name="description" content="Chirofind HTML5 Template " />
+    <meta name="description" content="Omega Chirpractic Pain Center" />
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,6 +32,9 @@
     <!-- template styles -->
     <link rel="stylesheet" href="assets/css/chirofind.css" />
     <link rel="stylesheet" href="assets/css/chirofind-responsive.css" />
+    <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -674,34 +677,63 @@
             </div>
             <div class="container">
                 <div class="section-title text-center">
-                    <div class="section-title__tagline-box">
-                        <div class="section-title__tagline-shape-1"></div>
-                        <span class="section-title__tagline">Our Therapists</span>
-                    </div>
-                    <h2 class="section-title__title">Our Chiropractic Team</h2>
+                    <h2 class="section-title__title">Our Office</h2>
                 </div>
-                <div class="row">
-                    <!--Team Two Single Start -->
-                    <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="100ms">
-                        <div class="team-two__single">
-                            <div class="team-two__img">
-                                <img src="assets/images/team/team-2-1.jpg" alt="">
-                            </div>
-                            <div class="team-two__content">
-                                <div class="team-two__info-box">
-                                    <h4 class="team-two__name"><a href="team-details.html">Marvin McKinney</a></h4>
-                                    <p class="team-two__sub-title">Physical Therapist</p>
+                <!-- Swiper Slider -->
+                <div class="team-two__slider swiper">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <div class="team-two__single">
+                                <div class="team-two__img">
+                                    <img src="assets/images/Office/norani-48.jpeg" alt="">
                                 </div>
-                                <div class="team-two__social">
-                                    <a href="#"><span class="icon-facebook"></span></a>
-                                    <a href="#"><span class="icon-instagram"></span></a>
-                                    <a href="#"><span class="icon-link-in"></span></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="team-two__single">
+                                <div class="team-two__img">
+                                    <img src="assets/images/Office/Ofc-5.jpeg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide">
+                            <div class="team-two__single">
+                                <div class="team-two__img">
+                                    <img src="assets/images/Office/Ofc-1.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide">
+                            <div class="team-two__single">
+                                <div class="team-two__img">
+                                    <img src="assets/images/Office/Ofc-2.jpeg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 4 -->
+                        <div class="swiper-slide">
+                            <div class="team-two__single">
+                                <div class="team-two__img">
+                                    <img src="assets/images/Office/Ofc-4.jpeg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="team-two__single">
+                                <div class="team-two__img">
+                                    <img src="assets/images/Office/Odc-3.jpeg" alt="">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
-                    <!--Team Two Single End -->
+                    <!-- Navigation Arrows -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <!-- Pagination Dots -->
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
         </section>
@@ -723,8 +755,12 @@
                         <img src="assets/images/shapes/appointment-two-shape-2.png" alt="">
                     </div>
                     <div class="row">
-                        <div class="col-xl-5"></div>
-                        <div class="col-xl-7">
+                        <div class="col-xl-5 col-lg-6">
+                            <div class="appointment-two__img">
+                                <img src="assets/images/resources/appointment-two-img-1.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-xl-7 col-lg-6">
                             <div class="appointment-two__right">
                                 <div class="section-title text-left">
                                     <div class="section-title__tagline-box">
@@ -733,61 +769,19 @@
                                     </div>
                                     <h2 class="section-title__title">Book Now An Appointment</h2>
                                 </div>
-                                <form class="contact-form-validated appointment-two__form"
-                                    action="assets/inc/sendemail.php" method="post" novalidate="novalidate">
-                                    <div class="row">
-                                        <div class="col-xl-6 col-lg-6">
-                                            <div class="appointment-two__input-box">
-                                                <input type="text" name="name" placeholder="Full Name" required="">
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-lg-6">
-                                            <div class="appointment-two__input-box">
-                                                <input type="email" name="email" placeholder="Email Address"
-                                                    required="">
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-lg-6">
-                                            <div class="appointment-two__input-box">
-                                                <input type="text" name="Phone" placeholder="Phone Number" required="">
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-lg-6">
-                                            <div class="appointment-two__input-box">
-                                                <input type="text" name="date" placeholder="Select Date"
-                                                    id="datepicker">
-                                                <div class="appointment-two__input-box-icon">
-                                                    <span class="icon-calender"></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-12">
-                                            <div class="appointment-two__input-box">
-                                                <div class="select-box">
-                                                    <select class="selectmenu wide">
-                                                        <option selected="selected">Type Of Service</option>
-                                                        <option>Type Of Service 01</option>
-                                                        <option>Type Of Service 02</option>
-                                                        <option>Type Of Service 03</option>
-                                                        <option>Type Of Service 04</option>
-                                                        <option>Type Of Service 05</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-12">
-                                            <div class="appointment-two__btn-box">
-                                                <button type="submit" class="thm-btn appointment-two__btn">Appointment Now<span class="icon-right-arrow"></span></button>
-                                            </div>
-                                        </div>
+                                <div class="appointment-two__content">
+                                    <p class="appointment-two__text">
+                                        Ready to take the first step towards better health? Schedule your chiropractic appointment today and experience personalized care from our expert team.
+                                    </p>
+                                    <br>
+
+                                    </br>
+                                    <div class="appointment-two__btn-box">
+                                        <a href="#" class="thm-btn appointment-two__btn">Appointment Now<span class="icon-right-arrow"></span></a>
                                     </div>
-                                </form>
-                                <div class="result"></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="appointment-two__img">
-                        <img src="assets/images/resources/appointment-two-img-1.png" alt="">
                     </div>
                 </div>
             </div>
@@ -935,6 +929,7 @@
     </div>
     <!-- search popup end-->
     <div class="body-overlay" id="body-overlay"></div>
+    
 
     <script src="assets/vendors/jquery/jquery-3.6.0.min.js"></script>
     <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -960,6 +955,45 @@
 
     <!-- template js -->
     <script src="assets/js/chirofind.js"></script>
+    <!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const teamSlider = new Swiper('.team-two__slider', {
+            // Optional parameters
+            slidesPerView: 3, // Show 3 slides at a time (matches the original grid)
+            spaceBetween: 30, // Match Bootstrap's gutter (30px)
+            loop: true, // Enable looping
+            autoplay: {
+                delay: 3000, // Auto-slide every 3 seconds
+                disableOnInteraction: false, // Continue autoplay after user interaction
+            },
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            // Pagination dots
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            // Responsive breakpoints
+            breakpoints: {
+                // When window width is <= 1199px (lg)
+                1199: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                // When window width is <= 767px (md)
+                767: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
+            },
+        });
+    });
+</script>
 </body>
 
 </html>
