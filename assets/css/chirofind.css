@@ -74,7 +74,7 @@ Version: 1.1.1
 :root {
   --chirofind-font: "Kumbh Sans", sans-serif;
   --chirofind-font-two: "Nunito", sans-serif;
-  --chirofind-gray: #ffffff;
+  --chirofind-gray: #9b9b9b;
   --chirofind-gray-rgb: 103, 104, 122;
   --chirofind-white: #ffffff;
   --chirofind-white-rgb: 255, 255, 255;
@@ -7122,7 +7122,83 @@ ul {
 .services-two__btn:hover span:after {
   background-color: var(--chirofind-white);
 }
+/*--------------------------------------------------------------
+# Services Two - Mobile Adjustments
+--------------------------------------------------------------*/
+@media (max-width: 767px) {
+  .services-two {
+      padding: 0 0 60px; /* Reduce bottom padding for mobile */
+  }
 
+  .services-two__single {
+      margin-bottom: 30px;
+  }
+
+  .services-two__single:last-child {
+      margin-bottom: 0;
+  }
+
+  /* Ensure all cards are visible */
+  .services-two .row > div {
+      display: block !important;
+      visibility: visible !important;
+  }
+
+  /* Adjust content area */
+  .services-two__content {
+      margin-right: 0; /* Remove margin-right on mobile */
+      padding: 58px 20px 32px; /* Reduce padding for smaller screens */
+      text-align: center; /* Center content on mobile */
+  }
+
+  /* Reposition the button inside the card */
+  .services-two__btn-box {
+      position: static; /* Remove absolute positioning */
+      transform: none; /* Remove rotation */
+      margin-top: 20px; /* Add spacing above the button */
+      display: flex;
+      justify-content: center;
+  }
+
+  .services-two__btn {
+      border-radius: 10px; /* Restore rounded corners on mobile */
+  }
+
+  /* Adjust image size */
+  .services-two__img img {
+      height: 200px; /* Fixed height for consistency on mobile */
+      object-fit: cover;
+  }
+
+  /* Adjust icon positioning */
+  .services-two__icon {
+      left: 50%;
+      transform: translateX(-50%); /* Center the icon */
+  }
+}
+
+@media (max-width: 767px) {
+  .services-two__btn-box {
+      position: static !important; /* Ensure the button is within the card */
+      transform: none !important;
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      z-index: 5; /* Increase z-index to ensure it’s above other elements */
+  }
+
+  .services-two__btn {
+      border-radius: 10px;
+      pointer-events: auto !important; /* Ensure the button is clickable */
+      z-index: 5; /* Ensure the button is above other elements */
+  }
+
+  /* Ensure no overlapping elements block the button */
+  .services-two__content {
+      position: relative;
+      z-index: 1; /* Lower z-index than the button */
+  }
+}
 
 /*--------------------------------------------------------------
 # About Two
@@ -15953,3 +16029,79 @@ ul {
   border-top-right-radius: 10px;
 }
 
+/*--------------------------------------------------------------
+# Team Two Slider - Mobile
+--------------------------------------------------------------*/
+/* Hide mobile slider on desktop */
+.team-two__slider-mobile {
+  display: none;
+}
+
+/* Show desktop slider on desktop, hide on mobile */
+@media (max-width: 767px) {
+  .team-two__slider {
+      display: none; /* Hide desktop slider on mobile */
+  }
+
+  .team-two__slider-mobile {
+      display: block; /* Show mobile slider on mobile */
+      position: relative;
+      padding-bottom: 40px;
+  }
+
+  .team-two__slider-mobile .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .team-two__slider-mobile .team-two__single-mobile {
+      width: 100%;
+      max-width: 100%; /* Full width on mobile */
+      border-radius: 10px;
+      overflow: hidden;
+      background-color: var(--chirofind-white);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .team-two__slider-mobile .team-two__img-mobile {
+      position: relative;
+      width: 100%;
+      height: 300px; /* Fixed height for consistency */
+      overflow: hidden;
+  }
+
+  .team-two__slider-mobile .team-two__img-mobile img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 10px;
+      display: block;
+  }
+
+  .team-two__slider-mobile .swiper-pagination-mobile {
+      text-align: center;
+      position: absolute;
+      bottom: 10px;
+  }
+
+  .team-two__slider-mobile .swiper-pagination-mobile .swiper-pagination-bullet {
+      background-color: var(--chirofind-gray);
+      opacity: 0.5;
+      width: 10px;
+      height: 10px;
+      margin: 0 5px;
+  }
+
+  .team-two__slider-mobile .swiper-pagination-mobile .swiper-pagination-bullet-active {
+      background-color: var(--chirofind-base);
+      opacity: 1;
+  }
+}
+@media (max-width: 767px) {
+    .team-two__slider-mobile .swiper-slide {
+        padding: 0;
+        margin: 0;
+    }
+}
