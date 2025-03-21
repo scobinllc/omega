@@ -3197,19 +3197,20 @@ ul {
 --------------------------------------------------------------*/
 
 
-
-
-/* Ensure content is above the overlay */
-.banner-one > * {
-  position: relative;
-  z-index: 1;
-}
+/*--------------------------------------------------------------
+# Banner One
+--------------------------------------------------------------*/
 .banner-one {
   position: relative;
   background-color: #1e4c7a; /* Light blue background */
   padding: 100px 0;
   min-height: 600px;
   overflow: visible;
+}
+
+.banner-one > * {
+  position: relative;
+  z-index: 1;
 }
 
 .banner-one__shape-1 {
@@ -3228,106 +3229,11 @@ ul {
 
 .banner-one__shape-1 img,
 .banner-one__shape-3 img {
-  width: 150px; /* Increased from 100px to 150px */
+  width: 150px;
   height: auto;
-  opacity: 0.8; /* Optional: Adjusted for visibility */
-  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2)); /* Optional: Add shadow */
+  opacity: 0.8;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
 }
-
-.banner-one__content {
-  position: relative;
-  z-index: 2; /* Above shapes */
-  text-align: center;
-  color: #fff; /* White text for contrast */
-}
-
-.banner-one__title {
-  font-size: 48px;
-  font-weight: 700;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.banner-one__subtitle {
-  font-size: 24px;
-  font-weight: 500;
-  margin-bottom: 20px;
-}
-
-.banner-one__btn-and-satisfied-patient {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  margin-top: 52px;
-}
-
-.banner-one__btn-box {
-  position: relative;
-  display: block;
-  
-}
-
-.banner-one__btn {
-  border: 1px solid var(--chirofind-white);
-  padding: 15px 24px 15px;
-}
-
-.banner-one__btn:hover {
-  border: 1px solid var(--chirofind-black);
-}
-
-.float-bob-y {
-  animation: float-bob-y 3s infinite;
-}
-
-.img-bounce {
-  animation: img-bounce 3s infinite;
-}
-
-@keyframes float-bob-y {
-  0% {
-      transform: translateY(0);
-  }
-  50% {
-      transform: translateY(-20px);
-  }
-  100% {
-      transform: translateY(0);
-  }
-}
-
-@keyframes img-bounce {
-  0%, 100% {
-      transform: scale(1);
-  }
-  50% {
-      transform: scale(1.1);
-  }
-}
-
-@media (max-width: 768px) {
-  .banner-one__shape-1 {
-      left: 20px;
-      top: 20px;
-  }
-  .banner-one__shape-3 {
-      right: 20px;
-      top: 20px;
-  }
-  .banner-one__shape-1 img,
-  .banner-one__shape-3 img {
-      width: 120px; /* Adjusted from 80px to 120px for responsiveness */
-  }
-  .banner-one__title {
-      font-size: 36px;
-  }
-  .banner-one__subtitle {
-      font-size: 18px;
-  }
-}
-
 
 .banner-one__shape-6 {
   position: absolute;
@@ -3344,13 +3250,16 @@ ul {
 .banner-one__inner {
   position: relative;
   display: block;
-  margin-left: -125px;
+  margin-left: 0; /* Remove the negative margin to avoid misalignment */
+  text-align: center; /* Center all content */
   z-index: 5;
 }
 
 .banner-one__content {
   position: relative;
   display: block;
+  color: #fff; /* White text for contrast */
+  z-index: 2; /* Above shapes */
 }
 
 .banner-one__sub-title-box {
@@ -3398,29 +3307,37 @@ ul {
   color: var(--chirofind-white);
   font-weight: 700;
   line-height: 90px;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 .banner-one__btn-and-satisfied-patient {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the button and reviews */
   align-items: center;
   gap: 30px;
-  flex-wrap: wrap;
   margin-top: 52px;
+  width: 100%;
 }
 
 .banner-one__btn-box {
   position: relative;
-  display: block;
+  display: inline-block; /* Ensure the button is centered within its container */
 }
 
 .banner-one__btn {
   border: 1px solid var(--chirofind-white);
-  padding: 15px 24px 15px;
+  padding: 15px 24px;
+  color: var(--chirofind-white); /* Ensure text is visible */
+  transition: all 0.3s ease;
 }
 
 .banner-one__btn:hover {
   border: 1px solid var(--chirofind-black);
+  color: var(--chirofind-black);
+  background-color: var(--chirofind-white);
 }
 
 .banner-one__satisfied-patient {
@@ -3436,6 +3353,7 @@ ul {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: center; /* Center the patient images */
 }
 
 .banner-one__satisfied-patient-list li {
@@ -3443,7 +3361,7 @@ ul {
   display: block;
 }
 
-.banner-one__satisfied-patient-list li+li {
+.banner-one__satisfied-patient-list li + li {
   margin-left: -13px;
 }
 
@@ -3492,198 +3410,115 @@ ul {
   line-height: 28px;
 }
 
-.banner-one__img-box {
-  position: absolute;
-  top: -170px;
-  right: -30px;
-  z-index: 2;
+.float-bob-y {
+  animation: float-bob-y 3s infinite;
 }
 
-.banner-one__img {
-  position: relative;
-  display: block;
+.img-bounce {
+  animation: img-bounce 3s infinite;
 }
 
-.banner-one__img>img {
-  width: auto;
+@keyframes float-bob-y {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-20px);
+  }
+  100% {
+      transform: translateY(0);
+  }
 }
 
-.banner-one__img-shape-1 {
-  position: absolute;
-  top: 91px;
-  left: 303px;
+@keyframes img-bounce {
+  0%, 100% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.1);
+  }
 }
 
-.banner-one__img-shape-1 img {
-  width: auto;
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .banner-one {
+      padding: 60px 0; /* Reduce padding for mobile */
+      min-height: 500px; /* Adjust height for mobile */
+  }
+
+  .banner-one__shape-1 {
+      left: 20px;
+      top: 20px;
+  }
+
+  .banner-one__shape-3 {
+      right: 20px;
+      top: 20px;
+  }
+
+  .banner-one__shape-1 img,
+  .banner-one__shape-3 img {
+      width: 120px; /* Adjusted for mobile */
+  }
+
+  .banner-one__shape-6 {
+      width: 500px; /* Reduce size for mobile */
+      height: 500px;
+      right: 150px;
+      top: 50px;
+  }
+
+  .banner-one__title {
+      font-size: 36px;
+      line-height: 46px;
+  }
+
+  .banner-one__sub-title {
+      font-size: 18px;
+  }
+
+  .banner-one__btn-and-satisfied-patient {
+      flex-direction: column; /* Stack vertically on mobile */
+      align-items: center;
+      gap: 20px;
+  }
+
+  .banner-one__btn-box {
+      width: 100%; /* Full width for the button on mobile */
+      text-align: center;
+  }
+
+  .banner-one__satisfied-patient {
+      flex-direction: row; /* Keep images and stars/text side by side */
+      justify-content: center;
+      width: 100%;
+  }
+
+  .banner-one__satisfied-patient-list {
+      justify-content: center;
+  }
+
+  .banner-one__satisfied-patient-content {
+      text-align: center; /* Center the stars and text on mobile */
+  }
 }
 
-.banner-one__img-shape-2 {
-  position: absolute;
-  bottom: 14px;
-  right: 245px;
-}
+@media (min-width: 768px) and (max-width: 991px) {
+  .banner-one__title {
+      font-size: 50px;
+      line-height: 60px;
+  }
 
-.banner-one__img-shape-2 img {
-  width: auto;
-}
+  .banner-one__sub-title {
+      font-size: 20px;
+  }
 
-.banner-one__pain-point-1 {
-  position: absolute;
-  width: 125px;
-  height: 45px;
-  top: 89px;
-  left: 276px;
-  z-index: 2;
+  .banner-one__btn-and-satisfied-patient {
+      flex-direction: row;
+      justify-content: center;
+      gap: 20px;
+  }
 }
-
-.banner-one__pain-markar {
-  position: absolute;
-  bottom: -48px;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 50%;
-  background-color: rgba(255, 30, 0, .50);
-  z-index: 5;
-  height: 30px;
-  width: 30px;
-  cursor: pointer;
-}
-
-.banner-one__pain-markar:before {
-  position: absolute;
-  top: 6px;
-  bottom: 6px;
-  right: 6px;
-  left: 6px;
-  background-color: #FF1E00;
-  content: "";
-  border-radius: 50%;
-}
-
-.banner-one__pain-markar:after {
-  content: "\e92d";
-  font-family: 'icomoon' !important;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  font-size: 9px;
-  color: var(--chirofind-white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.banner-one__popup-box {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  z-index: 2;
-  opacity: 0;
-  transform: perspective(400px) rotateX(90deg) translateY(10px);
-  transform-origin: bottom;
-  transition-delay: .1s;
-  transition-timing-function: ease-in-out;
-  transition-duration: .5s;
-  transition-property: all;
-}
-
-.banner-one__pain-point-1:hover .banner-one__popup-box {
-  opacity: 1.0;
-  transform: perspective(400px) rotateX(0deg) translateY(0);
-  transition-delay: .3s;
-  transition-timing-function: ease-in-out;
-  transition-duration: .5s;
-  transition-property: all;
-}
-
-.banner-one__popup {
-  position: relative;
-  display: block;
-  max-width: 125px;
-  width: 100%;
-  background-color: var(--chirofind-white);
-  padding: 14px 15px 14px;
-  border-radius: 3px;
-}
-
-.banner-one__popup:before {
-  content: "";
-  position: absolute;
-  bottom: -16px;
-  left: 50%;
-  border-top: 16px solid var(--chirofind-white);
-  border-right: 15px solid transparent;
-  border-left: 15px solid transparent;
-  transform: translateX(-50%);
-}
-
-.banner-one__popup-inner {
-  position: relative;
-  display: block;
-}
-
-.banner-one__popup-title {
-  font-size: 15px;
-  font-weight: 400;
-  color: var(--chirofind-base);
-  line-height: 15px;
-}
-
-.banner-one__pain-point-2 {
-  left: auto;
-  right: 25%;
-  top: 48%;
-}
-
-.banner-one__pain-point-3 {
-  left: 30.5%;
-  top: auto;
-  bottom: 34%;
-}
-
-.banner-one__pain-point-4 {
-  left: auto;
-  top: auto;
-  bottom: 18%;
-  right: 25.4%;
-}
-
-.banner-one__pain-markar .ripple,
-.banner-one__pain-markar .ripple:before,
-.banner-one__pain-markar .ripple:after {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 31px;
-  height: 31px;
-  border-radius: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  -ms-box-shadow: 0 0 0 0 rgba(255, 30, 0, .5);
-  -o-box-shadow: 0 0 0 0 rgba(255, 30, 0, .5);
-  -webkit-box-shadow: 0 0 0 0 rgba(255, 30, 0, .5);
-  box-shadow: 0 0 0 0 rgba(255, 30, 0, .5);
-  -webkit-animation: ripple 3s infinite;
-  animation: ripple 3s infinite;
-}
-
-.banner-one__pain-markar .ripple:before {
-  -webkit-animation-delay: 0.9s;
-  animation-delay: 0.9s;
-  content: "";
-  position: absolute;
-}
-
-.banner-one__pain-markar .ripple:after {
-  -webkit-animation-delay: 0.6s;
-  animation-delay: 0.6s;
-  content: "";
-  position: absolute;
-}
-
 
 /*--------------------------------------------------------------
 # Main Slider Two
