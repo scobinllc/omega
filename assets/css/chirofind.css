@@ -319,7 +319,7 @@ ul {
   text-transform: capitalize;
   padding: 12px 24px 12px;
   border-radius: 8px;
-  background-color: var(--chirofind-base);
+  background-color: #274e5c;
   font-family: var(--chirofind-font-two);
   -webkit-transition: all 0.5s linear;
   transition: all 0.5s linear;
@@ -3201,323 +3201,324 @@ ul {
 # Banner One
 --------------------------------------------------------------*/
 .banner-one {
-  position: relative;
-  background-color: #1e4c7a; /* Light blue background */
-  padding: 100px 0;
-  min-height: 600px;
-  overflow: visible;
+    position: relative;
+    background-color: #1d2935; /* Light blue background */
+    padding: 100px 0;
+    min-height: 600px;
+    overflow: visible;
 }
 
 .banner-one > * {
-  position: relative;
-  z-index: 1;
+    position: relative;
+    z-index: 1;
 }
 
 .banner-one__shape-1 {
-  position: absolute;
-  top: 50px;
-  left: 50px;
-  z-index: 1; /* Behind text */
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    z-index: 1; /* Behind text */
 }
 
 .banner-one__shape-3 {
-  position: absolute;
-  top: 50px;
-  right: 50px;
-  z-index: 1; /* Behind text */
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    z-index: 1; /* Behind text */
 }
 
 .banner-one__shape-1 img,
 .banner-one__shape-3 img {
-  width: 150px;
-  height: auto;
-  opacity: 0.8;
-  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
+    width: 150px;
+    height: auto;
+    opacity: 0.8;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
 }
 
 .banner-one__shape-6 {
-  position: absolute;
-  width: 734px;
-  height: 734px;
-  right: 255px;
-  top: 27px;
-  background: #D9D9D9;
-  opacity: 0.3;
-  filter: blur(175px);
-  border-radius: 50%;
+    position: absolute;
+    width: 734px;
+    height: 734px;
+    right: 255px;
+    top: 27px;
+    background: #D9D9D9;
+    opacity: 0.3;
+    filter: blur(175px);
+    border-radius: 50%;
 }
 
 .banner-one__inner {
-  position: relative;
-  display: block;
-  margin-left: 0; /* Remove the negative margin to avoid misalignment */
-  text-align: center; /* Center all content */
-  z-index: 5;
+    position: relative;
+    display: block;
+    margin-left: 0; /* Remove the negative margin to avoid misalignment */
+    text-align: center; /* Center all content */
+    z-index: 5;
 }
 
 .banner-one__content {
-  position: relative;
-  display: block;
-  color: #fff; /* White text for contrast */
-  z-index: 2; /* Above shapes */
+    position: relative;
+    display: block;
+    color: #fff; /* White text for contrast */
+    z-index: 2; /* Above shapes */
 }
 
 .banner-one__sub-title-box {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 19px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 19px;
 }
 
 .banner-one__sub-title-shape {
-  position: relative;
-  display: inline-block;
-  width: 26px;
-  height: 13px;
-  border: 1px solid var(--chirofind-white);
-  border-radius: 6px;
+    position: relative;
+    display: inline-block;
+    width: 26px;
+    height: 13px;
+    border: 1px solid var(--chirofind-white);
+    border-radius: 6px;
 }
 
 .banner-one__sub-title-shape::before {
-  content: "";
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  right: 2px;
-  bottom: 2px;
-  background-color: var(--chirofind-white);
-  border-radius: 4px;
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    background-color: var(--chirofind-white);
+    border-radius: 4px;
 }
 
 .banner-one__sub-title {
-  position: relative;
-  display: inline-block;
-  font-size: 22px;
-  color: var(--chirofind-white);
-  font-weight: 600;
-  line-height: 22px;
-  letter-spacing: 0.1em;
-  font-family: var(--chirofind-font-two);
+    position: relative;
+    display: inline-block;
+    font-size: 22px;
+    color: var(--chirofind-white);
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0.1em;
+    font-family: var(--chirofind-font-two);
 }
 
 .banner-one__title {
-  position: relative;
-  font-size: 80px;
-  color: var(--chirofind-white);
-  font-weight: 700;
-  line-height: 90px;
-  margin-bottom: 10px;
-  text-align: center;
+    position: relative;
+    font-size: 80px;
+    color: var(--chirofind-white);
+    font-weight: 700;
+    line-height: 90px;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 .banner-one__btn-and-satisfied-patient {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* Center the button and reviews */
-  align-items: center;
-  gap: 30px;
-  margin-top: 52px;
-  width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the button and reviews */
+    align-items: center;
+    gap: 30px;
+    margin-top: 52px;
+    width: 100%;
 }
 
 .banner-one__btn-box {
-  position: relative;
-  display: inline-block; /* Ensure the button is centered within its container */
+    position: relative;
+    color:#00224f;
+    display: inline-block; /* Ensure the button is centered within its container */
 }
 
 .banner-one__btn {
-  border: 1px solid var(--chirofind-white);
-  padding: 15px 24px;
-  color: var(--chirofind-white); /* Ensure text is visible */
-  transition: all 0.3s ease;
+    border: 1px solid var(--chirofind-white);
+    padding: 15px 24px;
+    color: var(--chirofind-white); /* Ensure text is visible */
+    transition: all 0.3s ease;
 }
 
 .banner-one__btn:hover {
-  border: 1px solid var(--chirofind-black);
-  color: var(--chirofind-black);
-  background-color: var(--chirofind-white);
+    border: 1px solid var(--chirofind-white);
+    color: var(--chirofind-white);
+    background-color: var(--chirofind-white);
 }
 
 .banner-one__satisfied-patient {
-  position: relative;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .banner-one__satisfied-patient-list {
-  position: relative;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center; /* Center the patient images */
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the patient images */
 }
 
 .banner-one__satisfied-patient-list li {
-  position: relative;
-  display: block;
+    position: relative;
+    display: block;
 }
 
 .banner-one__satisfied-patient-list li + li {
-  margin-left: -13px;
+    margin-left: -13px;
 }
 
 .banner-one__satisfied-patient-img {
-  position: relative;
-  display: block;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
+    position: relative;
+    display: block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
 }
 
 .banner-one__satisfied-patient-img img {
-  width: 100%;
-  border: 2px solid var(--chirofind-white);
-  border-radius: 50%;
+    width: 100%;
+    border: 2px solid var(--chirofind-white);
+    border-radius: 50%;
 }
 
 .banner-one__satisfied-patient-content {
-  position: relative;
-  display: block;
+    position: relative;
+    display: block;
 }
 
 .banner-one__satisfied-patient-star {
-  position: relative;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 5px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
 }
 
 .banner-one__satisfied-patient-star span {
-  position: relative;
-  display: flex;
-  align-items: center;
-  font-size: 16px;
-  color: #FFBE11;
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #FFBE11;
 }
 
 .banner-one__satisfied-patient-title {
-  font-size: 18px;
-  color: var(--chirofind-white);
-  font-weight: 600;
-  font-family: var(--chirofind-font-two);
-  text-transform: capitalize;
-  margin-top: 6px;
-  line-height: 28px;
+    font-size: 18px;
+    color: var(--chirofind-white);
+    font-weight: 600;
+    font-family: var(--chirofind-font-two);
+    text-transform: capitalize;
+    margin-top: 6px;
+    line-height: 28px;
 }
 
 .float-bob-y {
-  animation: float-bob-y 3s infinite;
+    animation: float-bob-y 3s infinite;
 }
 
 .img-bounce {
-  animation: img-bounce 3s infinite;
+    animation: img-bounce 3s infinite;
 }
 
 @keyframes float-bob-y {
-  0% {
-      transform: translateY(0);
-  }
-  50% {
-      transform: translateY(-20px);
-  }
-  100% {
-      transform: translateY(0);
-  }
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 @keyframes img-bounce {
-  0%, 100% {
-      transform: scale(1);
-  }
-  50% {
-      transform: scale(1.1);
-  }
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
 }
 
 /* Responsive adjustments */
 @media (max-width: 767px) {
-  .banner-one {
-      padding: 60px 0; /* Reduce padding for mobile */
-      min-height: 500px; /* Adjust height for mobile */
-  }
+    .banner-one {
+        padding: 60px 0; /* Reduce padding for mobile */
+        min-height: 500px; /* Adjust height for mobile */
+    }
 
-  .banner-one__shape-1 {
-      left: 20px;
-      top: 20px;
-  }
+    .banner-one__shape-1 {
+        left: 20px;
+        top: 20px;
+    }
 
-  .banner-one__shape-3 {
-      right: 20px;
-      top: 20px;
-  }
+    .banner-one__shape-3 {
+        right: 20px;
+        top: 20px;
+    }
 
-  .banner-one__shape-1 img,
-  .banner-one__shape-3 img {
-      width: 120px; /* Adjusted for mobile */
-  }
+    .banner-one__shape-1 img,
+    .banner-one__shape-3 img {
+        width: 120px; /* Adjusted for mobile */
+    }
 
-  .banner-one__shape-6 {
-      width: 500px; /* Reduce size for mobile */
-      height: 500px;
-      right: 150px;
-      top: 50px;
-  }
+    .banner-one__shape-6 {
+        width: 500px; /* Reduce size for mobile */
+        height: 500px;
+        right: 150px;
+        top: 50px;
+    }
 
-  .banner-one__title {
-      font-size: 36px;
-      line-height: 46px;
-  }
+    .banner-one__title {
+        font-size: 36px;
+        line-height: 46px;
+    }
 
-  .banner-one__sub-title {
-      font-size: 18px;
-  }
+    .banner-one__sub-title {
+        font-size: 18px;
+    }
 
-  .banner-one__btn-and-satisfied-patient {
-      flex-direction: column; /* Stack vertically on mobile */
-      align-items: center;
-      gap: 20px;
-  }
+    .banner-one__btn-and-satisfied-patient {
+        flex-direction: column; /* Stack vertically on mobile */
+        align-items: center;
+        gap: 20px;
+    }
 
-  .banner-one__btn-box {
-      width: 100%; /* Full width for the button on mobile */
-      text-align: center;
-  }
+    .banner-one__btn-box {
+        width: 100%; /* Full width for the button on mobile */
+        text-align: center;
+    }
 
-  .banner-one__satisfied-patient {
-      flex-direction: row; /* Keep images and stars/text side by side */
-      justify-content: center;
-      width: 100%;
-  }
+    .banner-one__satisfied-patient {
+        flex-direction: row; /* Keep images and stars/text side by side */
+        justify-content: center;
+        width: 100%;
+    }
 
-  .banner-one__satisfied-patient-list {
-      justify-content: center;
-  }
+    .banner-one__satisfied-patient-list {
+        justify-content: center;
+    }
 
-  .banner-one__satisfied-patient-content {
-      text-align: center; /* Center the stars and text on mobile */
-  }
+    .banner-one__satisfied-patient-content {
+        text-align: center; /* Center the stars and text on mobile */
+    }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .banner-one__title {
-      font-size: 50px;
-      line-height: 60px;
-  }
+    .banner-one__title {
+        font-size: 50px;
+        line-height: 60px;
+    }
 
-  .banner-one__sub-title {
-      font-size: 20px;
-  }
+    .banner-one__sub-title {
+        font-size: 20px;
+    }
 
-  .banner-one__btn-and-satisfied-patient {
-      flex-direction: row;
-      justify-content: center;
-      gap: 20px;
-  }
+    .banner-one__btn-and-satisfied-patient {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
 }
 
 /*--------------------------------------------------------------
