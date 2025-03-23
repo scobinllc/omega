@@ -9439,7 +9439,7 @@ ul {
 }
 
 .site-footer-two .site-footer__top {
-  padding: 92px 0 95px;
+  padding: 65px 0;
 }
 
 .site-footer-two .footer-widget__quick-link {
@@ -15954,4 +15954,7 @@ ul {
         padding: 0;
         margin: 0;
     }
+}
+.site-logo img, .footer-widget__logo img{
+  height: 70px;
 }
