@@ -6781,7 +6781,7 @@ ul {
   }
 
   .insurance-accepted__single:last-child {
-      margin-bottom: 0;
+      margin-bottom: 20px;
   }
 
   .insurance-accepted__img {
@@ -7033,7 +7033,7 @@ ul {
   }
 
   .services-two__single:last-child {
-      margin-bottom: 0;
+      margin-bottom: 30px;
   }
 
   /* Ensure all cards are visible */
@@ -7438,6 +7438,13 @@ ul {
   align-items: center;
   flex-wrap: wrap;
   gap: 30px;
+  
+}
+
+@media (max-width:767px){
+  .about-two__btn-and-sign {
+    margin-bottom: 50px;
+  }
 }
 
 .about-two__btn-box {
