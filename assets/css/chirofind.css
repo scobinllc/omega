@@ -3231,7 +3231,7 @@ ul {
 .banner-one__shape-3 img {
     width: 150px;
     height: auto;
-    opacity: 0.8;
+    opacity: 0.15;
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
 }
 
@@ -3260,6 +3260,7 @@ ul {
     display: block;
     color: #fff; /* White text for contrast */
     z-index: 2; /* Above shapes */
+    text-align: left;
 }
 
 .banner-one__sub-title-box {
@@ -3303,20 +3304,20 @@ ul {
 
 .banner-one__title {
     position: relative;
-    font-size: 80px;
+    font-size: 60px;
     color: var(--chirofind-white);
     font-weight: 700;
     line-height: 90px;
     margin-bottom: 10px;
-    text-align: center;
+    text-align: left;
 }
 
 .banner-one__btn-and-satisfied-patient {
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Center the button and reviews */
-    align-items: center;
+    justify-content: flex-start; /* Center the button and reviews */
+    align-items: flex-start;
     gap: 30px;
     margin-top: 52px;
     width: 100%;
@@ -7849,8 +7850,18 @@ ul {
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
   z-index: 1;
+  min-height: 490px;
 }
-
+.banner-one__img-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+.banner-one__img {
+  position: relative;
+  display: block;
+}
 .testimonial-two__single:before {
   content: "";
   position: absolute;
